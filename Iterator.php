@@ -7,7 +7,7 @@
  * @遍历模式-迭代器模式
  */
 
-/*class MyClass
+class MyClass
 {
     public $var1 = 'value 1';
     public $var2 = 'value 2';
@@ -25,7 +25,19 @@ foreach($class as $key => $value) {
     print "$key => $value\n";
 }
 echo "\n";
-$class->iterateAll();*/
+$class->iterateAll();
+
+
+//遍历可见属性
+/*var1 => value 1
+var2 => value 2
+var3 => value 3
+//遍历所有属性
+var1 => value 1
+var2 => value 2
+var3 => value 3
+protected => protected var
+private => private var*/
 
 
 

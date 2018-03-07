@@ -7,6 +7,15 @@
  * @状态模式
  */
 
+/*#策略模式
+if(isset($_GET['male'])){
+    $strategy = new maleShowStrategy();
+}elseif(isset($_GET['female'])){
+    $strategy = new femaleShowStrategy();
+}
+//注意看这里上下，Page类不再依赖一种具体的策略，而是只需要绑定一个抽象的接口，这就是传说中的控制反转（IOC）。
+$question = new Page($strategy);
+$question->showPage();*/
 
 class Shop {
     private $handler;

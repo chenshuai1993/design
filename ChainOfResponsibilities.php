@@ -7,17 +7,24 @@
  * @责任链模式
  */
 
-
+/**
+ * Class TranslationResponsibility
+ * @这是一个语言翻译的责任链
+ */
 abstract class TranslationResponsibility { // 抽象责任角色
     protected $next; // 下一个责任角色
+
     protected $translator;
+
     public function setNext(TranslationResponsibility $l) {
         $this->next = $l;
         return $this;
     }
+
     public function canTranslate($input){
         return $this->translator == $this->check($input);
     }
+
     public function check($input){
         //写验证输入语言总类的逻辑
        return 'French';
@@ -26,6 +33,10 @@ abstract class TranslationResponsibility { // 抽象责任角色
 }
 
 
+/**
+ * Class EnglishTranslator
+ * 英语翻译
+ */
 class EnglishTranslator extends TranslationResponsibility {
     public function __construct() {
         $this->translator = 'English';
@@ -43,6 +54,10 @@ class EnglishTranslator extends TranslationResponsibility {
 }
 
 
+/**
+ * Class EnglishTranslator
+ * 法语翻译
+ */
 class FrenchTranslator extends TranslationResponsibility {
     public function __construct() {
         $this->translator = 'French';

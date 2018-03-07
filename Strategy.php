@@ -7,6 +7,10 @@
  * @策略模式
  */
 
+/**
+ * Interface showStrategy
+ * @策略接口
+ */
 interface showStrategy{
     public function showCategory();
 }
